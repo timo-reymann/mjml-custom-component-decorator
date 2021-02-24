@@ -1,0 +1,22 @@
+{
+  "name": "mjml-custom-component-decorator",
+  "version": "1.0.0",
+  "description": "TypeScript decorator for MJML custom components",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "watch": "tsc -w",
+    "dist": "./scripts/create_lib.sh"
+  },
+  "author": "Timo Reymann <mail@timo-reymann.de>",
+  "repository": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mjml": "^4.7.0",
+    "mjml": "^4.8.1",
+    "typescript": "^4.2.2"
+  },
+  "files": [
+    "src/*.js"
+  ]
+}
