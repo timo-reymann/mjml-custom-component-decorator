@@ -16,7 +16,17 @@ autocomplete of your favourite IDE, isn't that awesome?!
 
 ## How can I use it?
 
-First of all you will need to enable experimental decorators in your tsconfig:
+### TypeScript
+
+First of all, you will need to enable experimental decorators in your tsconfig:
+
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true
+  }
+}
+```
 
 Then you can use it as simple as this:
 
@@ -24,6 +34,7 @@ Then you can use it as simple as this:
 import {registerComponent} from "mjml-core";
 import {BodyComponent} from "mjml-core";
 import {MJMLCustomComponent} from "mjml-custom-component-decorator";
+
 @MJMLCustomComponent({
     attributes: {
         text: {
@@ -46,7 +57,13 @@ export class MyCustomComponent extends BodyComponent {
 registerComponent(MyCustomComponent)
 ```
 
-### without the decorator ...
+### JavaScript
+
+Currently not supported because there is not really a usecase for this.
+
+If you are crazy about having this feature just create an issue and I will work on it.
+
+## Just for completeness without the decorator ...
 
 ... it looks like this:
 

@@ -44,5 +44,7 @@ export function MJMLCustomComponent(options: CustomComponentOptions) {
             dependencies[allowedParentTag] = [componentName]
         }
         registerDependencies(dependencies)
+
+        return target
     }
 }
