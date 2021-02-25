@@ -21,6 +21,9 @@ First of all you will need to enable experimental decorators in your tsconfig:
 Then you can use it as simple as this:
 
 ```typescript
+import {registerComponent} from "mjml-core";
+import {BodyComponent} from "mjml-core";
+import {MJMLCustomComponent} from "mjml-custom-component-decorator";
 @MJMLCustomComponent({
     attributes: {
         text: {
@@ -40,9 +43,6 @@ export class MyCustomComponent extends BodyComponent {
     }
 }
 
-// Somwhere before mjml2hmtl
-import {registerComponent} from "mjml-core";
-
 registerComponent(MyCustomComponent)
 ```
 
@@ -52,6 +52,7 @@ registerComponent(MyCustomComponent)
 
 ```typescript
 import {registerDependencies} from "mjml-validator"
+import {registerComponent} from "mjml-core";
 
 export class MyCustomComponent extends BodyComponent {
     static allowedAttributes = {
@@ -73,6 +74,7 @@ export class MyCustomComponent extends BodyComponent {
     }
 }
 
+registerComponent(MyCustomComponent)
 registerDependencies({
     'mj-column': ['my-custom-component'],
     'my-custom-component': []

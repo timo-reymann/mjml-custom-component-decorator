@@ -18,6 +18,7 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
+          - npm run dist
           - npm run semantic-release
         on:
           branch: main
