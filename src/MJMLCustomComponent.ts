@@ -1,7 +1,6 @@
 import {BodyComponent} from "mjml-core"
 import CustomComponentOptions from "./CustomComponentOptions";
 import {registerDependencies} from "mjml-validator"
-import {components} from "mjml-core"
 // Helper type for anonymous objects
 export type AnonymousObject = { [k: string]: any }
 
@@ -31,11 +30,15 @@ export function MJMLCustomComponent(options: CustomComponentOptions) {
         const componentName = target.getTagName()
         const {allowedAttributes, defaultAttributes} = buildAttributes(options)
 
-        target.endingTag = options.endingTag || true
+        if (options.endingTag != undefined) {
+            target.endingTag = options.endingTag
+        } else {
+            target.endingTag = true
+        }
+
         target.defaultAttributes = defaultAttributes
         target.allowedAttributes = allowedAttributes
 
-        console.log(!components)
         let dependencies: AnonymousObject = {}
         for (let allowedParentTag of options.allowedParentTags) {
             dependencies[allowedParentTag] = [componentName]

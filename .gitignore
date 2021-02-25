@@ -6,5 +6,6 @@ lib/
 *.d.ts
 *.js
 !mjml-validator.d.ts
+tsconfig.tsbuildinfo
 
 .idea/

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "emitDecoratorMetadata": true,
-    "incremental": true,
+    "incremental": false,
     "target": "es2015",
     "module": "commonjs",
     "inlineSources": true,
@@ -11,6 +11,6 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
-  },
+    "declaration": true,
+  }
 }
