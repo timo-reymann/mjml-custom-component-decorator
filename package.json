@@ -4,7 +4,7 @@
   "description": "TypeScript decorator for MJML custom components",
   "main": "lib/index.ts",
   "scripts": {
-    "test": "jest --config jest.config.js --rootDir .",
+    "test": "jest --rootDir .",
     "watch": "tsc -w --incremental",
     "dist": "rm -rf lib || true && mkdir -p lib && cp src/* lib/",
     "build": "tsc",
@@ -31,5 +31,21 @@
   },
   "files": [
     "lib/"
-  ]
+  ],
+  "jest": {
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx",
+      "json",
+      "node"
+    ]
+  }
 }
