@@ -21,8 +21,3 @@ jobs:
           - npm run semantic-release
         on:
           branch: main
-
-env:
-  global:
-    secure: "BDp6MAYHgg3msPB+ZywxYsuCkXq3x6f2Lehp60II3PTKDOwwEE6MgH06UpqhoeYXLwIQCYSl/qM/dC3jmhgV+kCPMVysfEDLsmkPADS/7npqHmiz2r6GicWeE5Sa+K2XYBQyJfbKjXrTLftN+nfO6g7moZFmhw18iUDn0wgN+3BGrq32UBnpzhStSiHRbLFKiWgs/dPIbzMus0oFXUaYL+Hdm1+mMMjo9UmtW0SfGn5i2Vu1h9o2VXkriHixu5WlHGro3d1TVmCpscsygGBjbj3dgbmee+9Lt/p3WvV7ob7YsQJqfqVLsydsW9UWd2yOKCPT5xfvGmWoCO9R8rYz3CMohU0pszmD3eBu9T985vx113z503wFHj7ivx7PBzaCBc3PTzz5XkddHH+X3NhoQh4PMaXqZw/4qWct5ihi//87l7oXuIczAPENj3sAnXYhb7DF1FPV5X1gMcV3D83DPrqBrERTyAz2XrTjrgR45vmeaEbItnpEPEW/jxXfMgzDVf+LyBqg8fnd1H2/5l+z6iSOXCigcp89dn/ALtQY0NBKN+KSBocS6utNS/wZKeXJkLd2itbj2WPU9PpJpF4hJMP+viWvYxzRJGkpLKf9jD+N7xsqDJLMcNUD19acNelGmFKwkBEu43v69lRLcF+rnrfXDhj6pS0DjtMU8bs2dpg="
-
