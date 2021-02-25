@@ -1,6 +1,7 @@
 mjml-custom-component-decorator
 ===
 [![npm version](https://badge.fury.io/js/mjml-custom-component-decorator.svg)](https://badge.fury.io/js/mjml-custom-component-decorator)
+[![Build Status](https://www.travis-ci.com/timo-reymann/mjml-custom-component-decorator.svg?branch=main)](https://www.travis-ci.com/timo-reymann/mjml-custom-component-decorator)
 
 TypeScript decorator for MJML custom components.
 
@@ -48,6 +49,7 @@ registerComponent(MyCustomComponent)
 ### without the decorator ...
 
 ... it looks like this:
+
 ```typescript
 import {registerDependencies} from "mjml-validator"
 
@@ -59,7 +61,7 @@ export class MyCustomComponent extends BodyComponent {
     static defaultAttributes = {
         'text': 'Hello World'
     }
-    
+
     static endingTag = false
 
     render() {
@@ -77,5 +79,4 @@ registerDependencies({
 })
 ```
 
-You duplicate your attribute name twice and can't have some kind of defaults (excerpt using
-inheritance)
+You duplicate your attribute name twice and can't have some kind of defaults (excerpt using inheritance)
