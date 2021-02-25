@@ -12,7 +12,6 @@ before_script:
 
 jobs:
   include:
-    # Define the release stage that runs semantic-release
     - stage: release
       node_js: 15
       deploy:
@@ -22,3 +21,7 @@ jobs:
           - npm run semantic-release
         on:
           branch: main
+
+env:
+  global:
+    secure: E8xXb2Q5HvVn3ivgPcWRHIQe1yNbXN/Pqo2bgeFOJxCjckSVLDVibsswbwr+RT15RoKBOFdOyb1ojEMQ/WDFsEg2AI5sE+ZiSX4VXk95MgfddlKrX56u7NBdVDpfFLYBxNnumYoco6X9u6bsGrP+vV3EWCu/5d50pllCrbhL40UKXxCj+sax77HholnMlL68h3Ue1uTVcc/AiXBcaSUWE5qCHWXH3gkB7QPep+ZYB4jx2dyfuSV4uonmBQUNVH6OmTDNcFKvCvQNWLjy35EbCeIwN9K4iuG4qcX8kk5l93qQETFvpVOjyWAA3nxESLQl5jmqUuKE/d5Fra8UGc8jy5yik5EXTfiXHb6b8zYod58n2ODKVXErB1uNnWyEwSK/QxqGcbuPHehxhtXev+PV+vEXrXhJ8iw0GKs6bddG59eXwtDJPBmTVE4f95RGrBWbBNSBA6M6UYdFu4/MnyYImKxSvDB73cXWKzS5XieQPnuVcAAMmBWAB3BamQpA/LkOhQuraK30w4Tc1mEOMMcXujeqW0IQ03m9ZFuho9wjrrFG0NC+GZMDbXUXwVnCvLHChAvAizEC76RFL9ig2ujIUGt1U8QpNiPXF/GYaeoYGOVF4LldBAM0RtCr7/F5pzwh18DywzWqJ2IMlDtj/VKmnqrxCi1/laPkeIv3zvZ+0W0=
