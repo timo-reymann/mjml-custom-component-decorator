@@ -8,7 +8,7 @@
     "watch": "tsc -w --incremental",
     "dist": "rm -rf lib || true && mkdir -p lib && cp src/* lib/",
     "build": "tsc",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --branches main"
   },
   "author": "Timo Reymann <mail@timo-reymann.de>",
   "repository": {
