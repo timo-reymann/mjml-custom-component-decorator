@@ -4,7 +4,7 @@
   "description": "TypeScript decorator for MJML custom components",
   "main": "lib/index.ts",
   "scripts": {
-    "test": "jest",
+    "test": "jest --config jest.config.js",
     "watch": "tsc -w --incremental",
     "dist": "rm -rf lib || true && mkdir -p lib && cp src/* lib/",
     "build": "tsc",

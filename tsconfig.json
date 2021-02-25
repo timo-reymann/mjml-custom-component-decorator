@@ -11,6 +11,9 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-  }
+    "declaration": true
+  },
+  "exclude": [
+    "test/"
+  ]
 }
