@@ -1,8 +1,8 @@
 {
   "name": "mjml-custom-component-decorator",
-  "version": "1.0.0",
+  "version": "0.0.5",
   "description": "TypeScript decorator for MJML custom components",
-  "main": "index.js",
+  "main": "lib/index.ts",
   "scripts": {
     "test": "jest",
     "watch": "tsc -w --incremental",
@@ -10,7 +10,14 @@
     "build": "tsc"
   },
   "author": "Timo Reymann <mail@timo-reymann.de>",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timo-reymann/mjml-custom-component-decorator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timo-reymann/mjml-custom-component-decorator/issuess"
+  },
+  "homepage": "https://github.com/timo-reymann/mjml-custom-component-decorator#readme",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.20",
@@ -21,6 +28,6 @@
     "typescript": "^4.2.2"
   },
   "files": [
-    "src/*.js"
+    "lib/"
   ]
 }
