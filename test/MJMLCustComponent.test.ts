@@ -13,7 +13,7 @@ function _createValidDecorator() {
     })
 }
 
-function _createDummyComponent() {
+function _createDummyComponent() : any {
     return {
         getTagName() {
             return "foo-bar"
@@ -30,7 +30,7 @@ describe("Test MJMLCustomCpomponent", () => {
 
     it("should map allowed attributes", () => {
         const decorator = _createValidDecorator()
-        const target: any = _createDummyComponent()
+        const target = _createDummyComponent()
         decorator(target)
 
         expect(Object.keys(target.allowedAttributes).length).toBe(1)
@@ -40,7 +40,7 @@ describe("Test MJMLCustomCpomponent", () => {
 
     it("should map default attributes", () => {
         const decorator = _createValidDecorator()
-        const target: any = _createDummyComponent()
+        const target = _createDummyComponent()
         decorator(target)
 
         expect(Object.keys(target.defaultAttributes).length).toBe(1)
@@ -50,7 +50,7 @@ describe("Test MJMLCustomCpomponent", () => {
 
     it("should map endingtag", () => {
         const decorator = _createValidDecorator()
-        const target: any = _createDummyComponent()
+        const target = _createDummyComponent()
         decorator(target)
 
         expect(target.endingTag).toBe(false)
