@@ -1,5 +1,6 @@
 mjml-custom-component-decorator
 ===
+[![npm version](https://badge.fury.io/js/mjml-custom-component-decorator.svg)](https://badge.fury.io/js/mjml-custom-component-decorator)
 
 TypeScript decorator for MJML custom components.
 
