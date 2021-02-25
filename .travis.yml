@@ -3,6 +3,9 @@ language: node_js
 node_js:
   - 15
 
+before_script:
+  - npm run build
+
 jobs:
   include:
     # Define the release stage that runs semantic-release
