@@ -8,7 +8,8 @@
     "watch": "tsc -w --incremental",
     "dist": "rm -rf lib || true && mkdir -p lib && cp src/* lib/",
     "build": "tsc",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release --branches main",
+    "release": "npm run dist && npm run semantic-release"
   },
   "author": "Timo Reymann <mail@timo-reymann.de>",
   "repository": {
