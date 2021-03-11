@@ -5,7 +5,7 @@ lib/
 # TypeScript
 *.d.ts
 *.js
-!mjml-validator.d.ts
+!src/mjml-validator.d.ts
 tsconfig.tsbuildinfo
 
 .idea/
