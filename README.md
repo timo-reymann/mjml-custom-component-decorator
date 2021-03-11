@@ -33,7 +33,7 @@ Then you can use it as simple as this:
 ```typescript
 import {registerComponent} from "mjml-core";
 import {BodyComponent} from "mjml-core";
-import {MJMLCustomComponent} from "mjml-custom-component-decorator";
+import {MJMLCustomComponent} from "mjml-custom-component-decorator/lib/MJMLCustomComponent";
 
 @MJMLCustomComponent({
     attributes: {
