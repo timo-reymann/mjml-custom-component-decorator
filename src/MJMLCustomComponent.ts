@@ -1,5 +1,6 @@
 import {BodyComponent} from "mjml-core"
 import CustomComponentOptions from "./CustomComponentOptions";
+// @ts-ignore
 import {registerDependencies} from "mjml-validator"
 // Helper type for anonymous objects
 export type AnonymousObject = { [k: string]: any }
