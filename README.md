@@ -2,6 +2,7 @@ mjml-custom-component-decorator
 ===
 [![npm version](https://badge.fury.io/js/mjml-custom-component-decorator.svg)](https://badge.fury.io/js/mjml-custom-component-decorator)
 [![Build Status](https://www.travis-ci.com/timo-reymann/mjml-custom-component-decorator.svg?branch=main)](https://www.travis-ci.com/timo-reymann/mjml-custom-component-decorator)
+[![Dependabot](https://badgen.net/badge/Dependabot/enabled/green?icon=dependabot)](https://dependabot.com/)
 
 TypeScript decorator for MJML custom components.
 
