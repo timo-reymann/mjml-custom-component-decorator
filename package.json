@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/mjml": "^4.7.0",
-    "jest": "^26.6.3",
+    "jest": "^27.0.4",
     "mjml": "^4.8.1",
     "semantic-release": "^17.3.9",
     "ts-jest": "^26.5.2",
