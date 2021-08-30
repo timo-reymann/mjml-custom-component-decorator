@@ -11,9 +11,14 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
+    "declaration": true,
+    "types": [
+      "node",
+      "jest"
+    ]
   },
-  "exclude": [
-    "test/"
+  "include": [
+    "src",
+    "test"
   ]
 }
