@@ -22,7 +22,7 @@
   "homepage": "https://github.com/timo-reymann/mjml-custom-component-decorator#readme",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^27.0.1",
     "@types/mjml": "^4.7.0",
     "jest": "^27.0.4",
     "mjml": "^4.8.1",
