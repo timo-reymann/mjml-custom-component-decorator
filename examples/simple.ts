@@ -34,7 +34,7 @@ const result = mjml2html(`
         <mj-column>
             <custom-text text-color="blue" text="Foo" />
             <mj-divider />            
-            <custom-text text="Bar"><mj-divider></mj-divider></custom-text>
+            <custom-text text="Bar"></custom-text>
             <mj-divider />
             <custom-text text="Baz" />
         </mj-column>
