@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "TypeScript decorator for MJML custom components",
   "main": "lib/index.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --rootDir .",
     "watch": "tsc -w --incremental",
