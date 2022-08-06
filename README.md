@@ -32,18 +32,22 @@ First of all, you will need to enable experimental decorators in your tsconfig:
 Then you can use it as simple as this:
 
 ```typescript
-import {registerComponent} from "mjml-core";
-import {BodyComponent} from "mjml-core";
+import {BodyComponent, registerComponent} from "mjml-core";
+import {registerDependencies} from "mjml-validator";
+
 import {MJMLCustomComponent} from "mjml-custom-component-decorator";
 
 @MJMLCustomComponent({
+    tag: "my-custom-component",
     attributes: {
         text: {
             type: 'string',
             default: 'Hello World'
         }
     },
-    allowedParentTags: ["mj-column"]
+    allowedParentTags: ["mj-column"],
+    registerDependencies,
+    registerComponent,
 })
 export class MyCustomComponent extends BodyComponent {
     render() {
@@ -54,8 +58,6 @@ export class MyCustomComponent extends BodyComponent {
         )
     }
 }
-
-registerComponent(MyCustomComponent)
 ```
 
 ### JavaScript

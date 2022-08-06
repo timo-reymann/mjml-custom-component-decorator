@@ -1,7 +1,10 @@
 import {MJMLCustomComponent} from "../src";
+import {registerComponent} from "mjml-core";
+import {registerDependencies} from "mjml-validator";
 
 function _createValidDecorator() {
     return MJMLCustomComponent({
+        tag: "mjml-custom-component",
         endingTag: false,
         allowedParentTags: [],
         attributes: {
@@ -9,11 +12,13 @@ function _createValidDecorator() {
                 type: 'string',
                 default: 'bar'
             }
-        }
+        },
+        registerComponent,
+        registerDependencies
     })
 }
 
-function _createDummyComponent() : any {
+function _createDummyComponent(): any {
     return {
         getTagName() {
             return "foo-bar"
@@ -23,7 +28,13 @@ function _createDummyComponent() : any {
 
 describe("Test MJMLCustomCpomponent", () => {
     it("should return a function", () => {
-        const result = MJMLCustomComponent({allowedParentTags: [], attributes: {}})
+        const result = MJMLCustomComponent({
+            tag: "",
+            allowedParentTags: [],
+            attributes: {},
+            registerComponent,
+            registerDependencies
+        })
         expect(result).not.toBeNull()
         expect(typeof result).toBe('function')
     })

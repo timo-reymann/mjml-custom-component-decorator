@@ -2,13 +2,13 @@
   "name": "mjml-custom-component-decorator",
   "version": "0.0.0-development",
   "description": "TypeScript decorator for MJML custom components",
-  "main": "lib/index.ts",
-  "types": "lib/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest --rootDir .",
     "build": "npm run build:clean && npm run build:tsc && npm run build:copy-files",
     "build:clean": "rm -rf dist/ || true && mkdir -p dist/",
-    "build:tsc": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.declarations.json",
+    "build:tsc": "tsc -p tsconfig.cjs.json",
     "build:copy-files": "cp -t ./dist/ LICENSE README.md package.json",
     "semantic-release": "semantic-release --branches main",
     "release": "npm run build && cd dist && npm i && npm run semantic-release"
@@ -24,37 +24,18 @@
   "homepage": "https://github.com/timo-reymann/mjml-custom-component-decorator#readme",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^4.4.2",
     "@types/jasmine": "^4.0.0",
     "@types/jest": "^27.0.1",
     "jest": "^27.0.4",
+    "semantic-release": "^19.0.2",
     "ts-jest": "^27.0.5",
-    "semantic-release": "^19.0.2"
+    "typescript": "^4.4.2",
+    "@types/mjml": "*",
+    "mjml": "*"
   },
   "peerDependencies": {
-    "mjml": "^4.8.1",
-    "@types/mjml": "^4.7.0"
-  },
-  "exports": {
-    "./package.json": {
-      "default": "./package.json"
-    },
-    ".": {
-      "types": "index.d.ts",
-      "esm2020": "./mjs/index.js",
-      "es2020": "./mjs/index.js",
-      "es2015": "./mjs/index.js",
-      "node": "./mjs/index.js",
-      "default": "./mjs/index.js",
-      "require": {
-        "type":  "commonjs",
-        "path": "./cjs/index.js"
-      },
-      "import": {
-        "type": "module",
-        "path": "./mjs/index.js"
-      }
-    }
+    "mjml-validator": "*",
+    "mjml": "*"
   },
   "jest": {
     "roots": [

@@ -2,8 +2,10 @@ import mjml2html from "mjml";
 import {BodyComponent} from "mjml-core";
 import {MJMLCustomComponent} from "../src";
 import {registerComponent} from "mjml-core";
+import {registerDependencies} from "mjml-validator";
 
 @MJMLCustomComponent({
+    tag: "custom-text",
     attributes: {
         text: {
             type: 'string',
@@ -13,7 +15,9 @@ import {registerComponent} from "mjml-core";
             type: "color"
         }
     },
-    allowedParentTags: ["mj-column"]
+    allowedParentTags: ["mj-column"],
+    registerDependencies,
+    registerComponent,
 })
 export class CustomText extends BodyComponent {
     render() {
@@ -24,8 +28,6 @@ export class CustomText extends BodyComponent {
         )
     }
 }
-
-registerComponent(CustomText)
 
 const result = mjml2html(`
   <mjml>
