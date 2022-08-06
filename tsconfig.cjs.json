@@ -3,7 +3,7 @@
   "compilerOptions": {
     "module": "commonjs",
     "outDir": "dist",
-    "target": "es5",
+    "target": "es2020",
     "declarationMap": true
   }
 }
