@@ -3,6 +3,11 @@
   "compilerOptions": {
     "module": "ES2015",
     "target": "es2015",
-    "outDir": "dist/"
+    "outDir": "dist/",
+    "paths": {
+      "mjml-custom-component-decorator": [
+        "dist/"
+      ]
+    }
   },
 }

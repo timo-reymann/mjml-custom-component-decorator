@@ -5,6 +5,5 @@
     "outDir": "dist",
     "target": "es5",
     "declarationMap": true
-  },
-
+  }
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "jest --rootDir .",
+    "test": "jest",
     "build": "npm run build:clean && npm run build:tsc && npm run build:copy-files",
     "build:clean": "rm -rf dist/ || true && mkdir -p dist/",
     "build:tsc": "tsc -p tsconfig.cjs.json",
@@ -41,10 +41,13 @@
     "roots": [
       "<rootDir>/test"
     ],
+    "moduleNameMapper": {
+      "mjml-custom-component-decorator": "<rootDir>/dist"
+    },
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "testRegex": "(/__test__/.*|(\\.|/)(test|spec))\\.tsx?$",
     "moduleFileExtensions": [
       "js",
       "ts",
