@@ -1,4 +1,4 @@
-import {MJMLCustomComponent} from "mjml-custom-component-decorator";
+import {MJMLCustomComponent} from "../src";
 import {registerComponent} from "mjml-core";
 import {registerDependencies} from "mjml-validator";
 
