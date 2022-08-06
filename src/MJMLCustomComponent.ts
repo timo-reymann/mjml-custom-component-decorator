@@ -1,4 +1,4 @@
-import {BodyComponent } from "mjml-core"
+import {BodyComponent} from "mjml-core"
 import {CustomComponentOptions} from "./CustomComponentOptions";
 // Helper type for anonymous objects
 export type AnonymousObject = { [k: string]: any }
@@ -46,7 +46,10 @@ export function MJMLCustomComponent(options: CustomComponentOptions) {
         }
 
         options.registerDependencies(dependencies)
-        options.registerComponent(target)
+
+        if (options.registerComponent) {
+            options.registerComponent(target)
+        }
 
         return target
     }
