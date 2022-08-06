@@ -41,11 +41,11 @@
     },
     ".": {
       "types": "index.d.ts",
-      "esm2020": "./mjs/index.mjs",
-      "es2020": "./mjs/index.mjs",
-      "es2015": "./mjs/index.mjs",
-      "node": "./mjs/index.mjs",
-      "default": "./mjs/index.mjs",
+      "esm2020": "./mjs/index.js",
+      "es2020": "./mjs/index.js",
+      "es2015": "./mjs/index.js",
+      "node": "./mjs/index.js",
+      "default": "./mjs/index.js",
       "require": {
         "type":  "commonjs",
         "path": "./cjs/index.js"
