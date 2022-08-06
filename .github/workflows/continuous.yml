@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Execute tests
-        run: ls dist -la && npm run test || true # ignore for now, passes locally
+        run: ls dist -la && npm run test
 
   build-deploy:
     runs-on: ubuntu-18.04
