@@ -1,6 +1,5 @@
 import {MJMLCustomComponent} from "../src";
-import {BodyComponent, registerComponent} from "mjml-core";
-import {registerDependencies} from "mjml-validator";
+import {BodyComponent} from "mjml-core";
 import mjml2html from "mjml";
 
 function _createValidDecorator() {
@@ -16,8 +15,6 @@ function _createValidDecorator() {
                 default: 'bar'
             }
         },
-        registerComponent,
-        registerDependencies
     })
 }
 
@@ -39,8 +36,6 @@ describe("Test MJMLCustomCpomponent", () => {
             tag: "",
             allowedParentTags: [],
             attributes: {},
-            registerComponent,
-            registerDependencies
         })
         expect(result).not.toBeNull()
         expect(typeof result).toBe('function')

@@ -3,7 +3,7 @@ import {BodyComponent} from "mjml-core";
 import {MJMLCustomComponent} from "../src";
 
 describe("integration test", () => {
-    it("should register properly", () => {
+    it("should register properly and allow rendering seemlessly", () => {
         @MJMLCustomComponent({
             tag: "custom-text",
             attributes: {
