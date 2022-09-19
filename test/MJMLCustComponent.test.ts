@@ -1,27 +1,31 @@
 import {MJMLCustomComponent} from "../src";
-import {registerComponent} from "mjml-core";
-import {registerDependencies} from "mjml-validator";
+import {BodyComponent} from "mjml-core";
+import mjml2html from "mjml";
 
 function _createValidDecorator() {
     return MJMLCustomComponent({
         tag: "mjml-custom-component",
         endingTag: false,
-        allowedParentTags: [],
+        allowedParentTags: [
+            "mj-column"
+        ],
         attributes: {
             foo: {
                 type: 'string',
                 default: 'bar'
             }
         },
-        registerComponent,
-        registerDependencies
     })
 }
 
 function _createDummyComponent(): any {
-    return {
-        getTagName() {
-            return "foo-bar"
+    return new class extends BodyComponent {
+        constructor() {
+            super({});
+        }
+
+        render(): string {
+            return this.renderMJML(` <mj-text>Test </mj-text>`)
         }
     }
 }
@@ -32,8 +36,6 @@ describe("Test MJMLCustomCpomponent", () => {
             tag: "",
             allowedParentTags: [],
             attributes: {},
-            registerComponent,
-            registerDependencies
         })
         expect(result).not.toBeNull()
         expect(typeof result).toBe('function')

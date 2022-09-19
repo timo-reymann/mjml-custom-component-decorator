@@ -46,8 +46,6 @@ import {MJMLCustomComponent} from "mjml-custom-component-decorator";
         }
     },
     allowedParentTags: ["mj-column"],
-    registerDependencies,
-    registerComponent,
 })
 export class MyCustomComponent extends BodyComponent {
     render() {
