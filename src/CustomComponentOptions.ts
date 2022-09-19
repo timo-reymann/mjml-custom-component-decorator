@@ -24,22 +24,4 @@ export interface CustomComponentOptions {
      * Tag for element
      */
     tag: string;
-
-    /**
-     * registerDependencies function from mjml-validator
-     *
-     *
-     * Since bundling would use the wrong validator context and therefore validation won't work you need to specify it
-     */
-    registerDependencies : (payload: { [k: string]: string[] }) => void
-
-    /**
-     * registerComponent function from mjml-core
-     *
-     * If not provided, component wont be registered
-     *
-     * Since bundling would use the wrong validator core context and therefore validation won't work you need to specify it
-     * @param ComponentClass
-     */
-    registerComponent ?: (ComponentClass: typeof BodyComponent) => void
 }

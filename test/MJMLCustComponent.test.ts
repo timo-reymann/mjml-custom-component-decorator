@@ -1,12 +1,15 @@
 import {MJMLCustomComponent} from "../src";
-import {registerComponent} from "mjml-core";
+import {BodyComponent, registerComponent} from "mjml-core";
 import {registerDependencies} from "mjml-validator";
+import mjml2html from "mjml";
 
 function _createValidDecorator() {
     return MJMLCustomComponent({
         tag: "mjml-custom-component",
         endingTag: false,
-        allowedParentTags: [],
+        allowedParentTags: [
+            "mj-column"
+        ],
         attributes: {
             foo: {
                 type: 'string',
@@ -19,9 +22,13 @@ function _createValidDecorator() {
 }
 
 function _createDummyComponent(): any {
-    return {
-        getTagName() {
-            return "foo-bar"
+    return new class extends BodyComponent {
+        constructor() {
+            super({});
+        }
+
+        render(): string {
+            return this.renderMJML(` <mj-text>Test </mj-text>`)
         }
     }
 }
