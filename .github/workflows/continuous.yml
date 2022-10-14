@@ -1,4 +1,4 @@
-name: Continuous Test, Build & Release
+name: continuous
 
 on:
   push:
