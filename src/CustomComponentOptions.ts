@@ -1,5 +1,4 @@
 import {CustomComponentAttribute} from "./CustomComponentAttribute";
-import {BodyComponent} from "mjml-core";
 
 /**
  * Options for a custom component

@@ -1,6 +1,5 @@
-import {BodyComponent} from "mjml-core"
 import {CustomComponentOptions} from "./CustomComponentOptions";
-import {registerComponent} from "mjml-core";
+import {registerComponent, BodyComponent} from "mjml-core";
 import {registerDependencies} from "mjml-validator";
 // Helper type for anonymous objects
 export type AnonymousObject = { [k: string]: any }
