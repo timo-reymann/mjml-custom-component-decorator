@@ -7,18 +7,26 @@ mjml-custom-component-decorator
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=timo-reymann_mjml-custom-component-decorator&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=timo-reymann_mjml-custom-component-decorator)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=timo-reymann_mjml-custom-component-decorator&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=timo-reymann_mjml-custom-component-decorator)
 
-TypeScript decorator for MJML custom components.
+<p align="center">
+	<img width="300" src="./.github/images/logo.svg">
+    <br />
+    TypeScript decorator for MJML custom components.
+</p>
 
-## Why?
+## Features
+- Define custom MJML components with TypeScript decorator
+- Automatic discovery and registration on file load
 
-When you are developing custom components in mjml you will find yourself writing the same boilerplate code over and over
-again. It gets even worse, because you need to define some static properties without any kind of autocomplete.
+## Requirements
+- [mjml](https://www.npmjs.com/package/mjml)
+- [TypeScript 3+](https://www.npmjs.com/package/typescript)
 
-This is where typescript and its decorator features come handy. You write the decorator, and the project simply
-intercepts the class and adds the required fields. To make it even easier, TypeScript enables you to use the
-autocomplete of your favourite IDE, isn't that awesome?!
+## Installation
+```shell
+npm i --save mjml-custom-component-decorator
+```
 
-## How can I use it?
+## Usage
 
 ### TypeScript
 
@@ -61,13 +69,16 @@ export class MyCustomComponent extends BodyComponent {
 }
 ```
 
-### JavaScript
+## Motivation
 
-Currently not supported because there is not really a usecase for this.
+When you are developing custom components in mjml you will find yourself writing the same boilerplate code over and over
+again. It gets even worse, because you need to define some static properties without any kind of autocomplete.
 
-If you are crazy about having this feature just create an issue and I will work on it.
+This is where typescript and its decorator features come handy. You write the decorator, and the project simply
+intercepts the class and adds the required fields. To make it even easier, TypeScript enables you to use the
+autocomplete of your favourite IDE, isn't that awesome?!
 
-## Just for completeness without the decorator ...
+### Just for completeness without the decorator ...
 
 ... it looks like this:
 
@@ -103,3 +114,30 @@ registerDependencies({
 ```
 
 You duplicate your attribute name twice and can't have some kind of defaults (excerpt using inheritance)
+
+## Contributing
+I love your input! I want to make contributing to this project as easy and transparent as possible, whether it's:
+
+- Reporting a bug
+- Discussing the current state of the configuration
+- Submitting a fix
+- Proposing new features
+- Becoming a maintainer
+
+To get started please read the [Contribution Guidelines](./CONTRIBUTING.md).
+
+## Development
+
+### Requirements
+- [Node 18](https://nodejs.org/)
+
+### Test
+```sh
+npm run test
+```
+
+### Build
+```sh
+npm run build
+```
+
