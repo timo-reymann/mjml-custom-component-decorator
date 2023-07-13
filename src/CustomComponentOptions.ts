@@ -20,6 +20,11 @@ export interface CustomComponentOptions {
     allowedParentTags: string[]
 
     /**
+     * Allowed tags for child
+     */
+    allowedChildTags: string[]
+
+    /**
      * Tag for element
      */
     tag: string;

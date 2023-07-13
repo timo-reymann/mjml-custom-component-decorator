@@ -46,6 +46,10 @@ export function MJMLCustomComponent(options: CustomComponentOptions) {
             dependencies[allowedParentTag] = [componentName]
         }
 
+        if (options.allowedChildTags) {
+            dependencies[componentName] = options.allowedChildTags
+        }
+
         registerDependencies(dependencies)
         registerComponent(target)
 
