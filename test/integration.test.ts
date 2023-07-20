@@ -15,7 +15,8 @@ describe("integration test", () => {
                     type: "color"
                 }
             },
-            allowedParentTags: ["mj-column"]
+            allowedParentTags: ["mj-column"],
+            allowedChildTags: [],
         })
          class CustomText extends BodyComponent {
             render() {
