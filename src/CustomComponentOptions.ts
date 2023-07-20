@@ -20,7 +20,7 @@ export interface CustomComponentOptions {
     allowedParentTags: string[]
 
     /**
-     * Allowed tags for child
+     * Allowed tags as child
      */
     allowedChildTags?: string[]
 
