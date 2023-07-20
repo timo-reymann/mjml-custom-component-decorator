@@ -22,7 +22,7 @@ export interface CustomComponentOptions {
     /**
      * Allowed tags for child
      */
-    allowedChildTags: string[]
+    allowedChildTags?: string[]
 
     /**
      * Tag for element

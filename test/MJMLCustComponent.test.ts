@@ -9,7 +9,6 @@ function _createValidDecorator() {
         allowedParentTags: [
             "mj-column"
         ],
-        allowedChildTags: [],
         attributes: {
             foo: {
                 type: 'string',
@@ -36,7 +35,6 @@ describe("Test MJMLCustomCpomponent", () => {
         const result = MJMLCustomComponent({
             tag: "",
             allowedParentTags: [],
-            allowedChildTags: [],
             attributes: {},
         })
         expect(result).not.toBeNull()
